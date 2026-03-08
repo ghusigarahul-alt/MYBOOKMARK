@@ -18,9 +18,9 @@
 </script>
 </head>
 
-<body>
+<body class="content>
  <center>
-  <h1>
+  <h1  >
    MY BOOK MARK
   </h1><br>
   <table border="4" cellspacing="0">
@@ -59,6 +59,7 @@
 
 
   </table>
+   <img src="c:\Users\rahul\Downloads\image.jpeg" class="background-image" alt="Background">
   
 </center>
   <style>
@@ -78,11 +79,37 @@ a { text-decoration: none
     }
     body{
       background-color: honeydew;
-    }
+  }
+      .content {
+            position: relative;
+            z-index: 1; /* यह टेक्स्ट को इमेज के ऊपर रखेगा */
+            color: black; /* अपने टेक्स्ट का रंग यहाँ बदल सकते हैं, जैसे white या blue */
+        }
+  
+
+    /* इमेज को पूरे पेज पर सेट करने और पीछे भेजने का कोड */
+        .background-image {
+            position: fixed; /* इमेज को स्क्रीन पर फिक्स रखेगा, स्क्रॉल करने पर भी नहीं हिलेगी */
+            top: 0;
+            left: 0;
+            width: 100vw; /* स्क्रीन की पूरी चौड़ाई */
+            height: 100vh; /* स्क्रीन की पूरी लंबाई */
+            object-fit: cover; /* इमेज को स्ट्रेच होने से बचाएगा और पूरे पेज पर फैलाएगा */
+            z-index: -1; /* सबसे ज़रूरी: यह इमेज को टेक्स्ट के पीछे (बैकग्राउंड में) भेज देगा */
+            opacity: 0.8; /* अगर आप चाहें तो इसे 0.5 से 1.0 के बीच रखकर इमेज को थोड़ा हल्का (transparent) कर सकते हैं ताकि टेक्स्ट साफ दिखे */
+        }
+        
+        /* आपके टेक्स्ट को साफ दिखाने के लिए थोड़ा स्टाइल */
+        .content {
+            position: relative;
+            z-index: 1; /* यह टेक्स्ट को इमेज के ऊपर रखेगा */
+            color: black; /* अपने टेक्स्ट का रंग यहाँ बदल सकते हैं, जैसे white या blue */
+        }
   </style>
 </body>
 
 </html>
+
 
 
 
